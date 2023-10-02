@@ -4,59 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .ball{
-            width: 300px;
-            height: 300px;
-            background: repeating-conic-gradient(red 10%,yellow 20%);
-            border-radius: 50%;
-            animation-name: rotate;
-            animation-duration: 6s;
-            animation-timing-function: ease;
-            animation-iteration-count: infinite;
-            transition: width 5s, height 5s ;
-            position: relative;
-        }
-        @keyframes rotate {
-            0%{
-            background: repeating-conic-gradient(red 10%,yellow 20%);
-            transform: rotate(90deg);
-            top: 0px;
-            }
-            50%{
-                background: repeating-conic-gradient(blue 10%,white 20%);
-            transform: rotate(90deg);
-            top: 200px;
-
-                }
-                100%{
-                    background: repeating-conic-gradient(orange 10%,aqua 20%);
-            transform: rotate(360deg);
-                    top: 0px;
-                    }
-        }
-        .ball:hover{
-            width: 500px;
-            height: 500px;
-        }
-        #one{
-            display: flex;
-            justify-content: space-around;
-        }
-        body{
-            background-color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="time.css">
 </head>
-<body>
+<body onload="startTime()">
+    <div class="label">
+        <h1>DIGITAL CLOCK</h1>
+        <h2>CODEMaster 🖥️💻</h2>
+    </div>
+    <section>
+        <div class="one">
+            <p id="a">
+                01
+            </p>
+            <h3>HOURS</h3>
+        </div>
+        <div class="two">
+            <p id="b">
+                36
+            </p>
+            <h3>MINUTES</h3>
+        </div>
+        <div class="three">
+            <p id="c">
+                56
+            </p>
+            <h3>SECONDS</h3>
+        </div>
+    </section>
     
-   <div id="one">
-    <div class="ball">
-
-    </div>
-    <div class="ball">
-
-    </div>
-   </div>
+    <script src="time.js"></script>
 </body>
 </html>
